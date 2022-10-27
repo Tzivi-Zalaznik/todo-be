@@ -1,6 +1,6 @@
 FROM node:10-alpine as builder
 WORKDIR /usr/src/app
-COPY *.json /app/
+COPY *.json /usr/src/app/
 RUN npm install
 
 
