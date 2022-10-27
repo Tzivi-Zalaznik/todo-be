@@ -52,8 +52,7 @@ pipeline {
             steps {
 
                 echo "Push_stage"
-
-                 sh 'docker login -u tzivya -p TZ621616@'
+                sh 'docker login -u ${username} -p ${password}'
                 sh 'docker push tzivya/todo-be:latest'
 
             }
