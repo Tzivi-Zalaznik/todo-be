@@ -12,7 +12,7 @@ pipeline {
 
                 echo "Build_stage"
 
-                sh 'DOCKER_BUILDKIT=1 docker build -t tzivya/todo-fe:latest -f Dockerfile-pipeline --target builder .'
+                sh 'DOCKER_BUILDKIT=1 docker build -t tzivya/todo-be:latest -f Dockerfile-pipeline --target builder .'
 
             }
 
@@ -28,7 +28,7 @@ pipeline {
 
                 echo "Delivery_stage"
 
-                sh 'DOCKER_BUILDKIT=1 docker build -t tzivya/todo-fe:latest -f Dockerfile-pipeline --target delivery .'
+                sh 'DOCKER_BUILDKIT=1 docker build -t tzivya/todo-be:latest -f Dockerfile-pipeline --target delivery .'
 
             }
 
